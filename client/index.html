@@ -52,13 +52,12 @@
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <a
-                class="btn btn-danger"
-                data-bs-toggle="modal"
-                data-bs-target="#Login"
-                id="LoginAndLogOut"
-              >
-                <i class="fa-solid fa-user" ></i> Admin Login
+              <a class="btn btn-danger" id="LoginAndLogOut" title="Admin Login">
+                <i
+                  class="fa-solid fa-user"
+                  data-bs-toggle="modal"
+                  data-bs-target="#Login"
+                ></i>
               </a>
             </form>
           </div>
@@ -121,25 +120,20 @@
             <div class="row form-group">
               <label class="col-4">User Name</label>
               <div class="col-8">
-                <input class="form-control" type="text" id="userName"/>
+                <input class="form-control" type="text" id="userName" />
               </div>
             </div>
             <div class="row form-group">
               <label class="col-4">User Password</label>
               <div class="col-8">
-                <input class="form-control" type="password" id="userPassword"/>
+                <input class="form-control" type="password" id="userPassword" />
               </div>
             </div>
           </div>
           <div class="modal-footer bg-white">
-            <a
-             
-              class="btn btn-primary"
-              data-bs-dismiss="modal"
-              id="AdminLogin"
-            >
+            <a class="btn btn-primary" data-bs-dismiss="modal" id="AdminLogin">
               Save changes
-          </a>
+            </a>
             <button
               type="button"
               class="btn btn-secondary"
@@ -162,38 +156,47 @@
             <div class="row form-group">
               <label class="col-4">Product Name</label>
               <div class="col-8">
-                <input class="form-control" type="text" id="userName"/>
+                <input class="form-control" type="text" id="ProductName" />
               </div>
             </div>
-            
+
             <div class="row form-group">
               <label class="col-4">Product Discription</label>
               <div class="col-8">
-                <input class="form-control" type="text" id="ProductDiscription"/>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="ProductDiscription"
+                />
               </div>
             </div>
             <div class="row form-group">
               <label class="col-4">Product Type</label>
               <div class="col-8">
-                <input class="form-control" type="text" id="ProductType"/>
+                <input class="form-control" type="text" id="ProductType" />
               </div>
             </div>
             <div class="row form-group">
               <label class="col-4">Product Images</label>
               <div class="col-8">
-                <input class="form-control" type="file" name="images" id="ProductType"/>
+                <input
+                  class="form-control"
+                  type="file"
+                  name="images"
+                  multiple
+                  id="image"
+                />
               </div>
             </div>
           </div>
           <div class="modal-footer bg-white">
             <a
-             
               class="btn btn-primary"
               data-bs-dismiss="modal"
-              onclick=AddProduct()
+              onclick="AddProduct()"
             >
               Save changes
-          </a>
+            </a>
             <button
               type="button"
               class="btn btn-secondary"

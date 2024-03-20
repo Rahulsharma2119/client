@@ -1,11 +1,12 @@
 let xhr = new XMLHttpRequest();
-xhr.open("GET", "http://localhost:8088/GetAllProducts", true);
+xhr.open("GET", "https://cuddly-palm-tree-vx56vw5qpj92x46q-8088.app.github.dev/GetAllProducts", true);
 xhr.setRequestHeader("Content-Type", "application/json");
 xhr.onreadystatechange = function () {
   if (xhr.readyState === XMLHttpRequest.DONE) {
     if (xhr.status === 200) {
       // Parse the response JSON
       let Products = JSON.parse(xhr.responseText);
+      console.log(Products)
       let productBody = document.getElementById("productBody");
       
       // Initialize a variable to accumulate the HTML content

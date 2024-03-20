@@ -1,7 +1,7 @@
 document.getElementById('AdminLogin').addEventListener('click',() => {
   console.log("clicked");
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "http://localhost:8088/LoginCheck", true);
+  xhr.open("POST", "https://cuddly-palm-tree-vx56vw5qpj92x46q-8088.app.github.dev/LoginCheck", true);
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.onreadystatechange = function () {
     if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -17,7 +17,7 @@ document.getElementById('AdminLogin').addEventListener('click',() => {
       }
     }
   };
-
+  
   xhr.send(
     JSON.stringify({
         UserEmail: document.getElementById('userName').value,
@@ -25,5 +25,17 @@ document.getElementById('AdminLogin').addEventListener('click',() => {
     })
   );
 });
+
+if(sessionStorage.getItem("token") != null){
+  document.getElementById("LoginAndLogOut").innerHTML = `
+    <i class="fa-solid fa-user" onclick=LogOut()></i> LogOut
+    `;
+}
+function LogOut(){
+  sessionStorage.removeItem("token");
+  location.reload();
+}
+
+
 
 
